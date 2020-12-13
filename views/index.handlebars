@@ -1,10 +1,44 @@
 <h1>Eat some burgers!</h1>
 
 <h2>Burgers still to eat:</h2>
-<ul>
+
+{{!-- burger list --}}
+<ol>
     {{#each burgers}}
+    {{#unless devoured}}
     <li>
+        {{id}}
         {{burger_name}}
+        {{devoured}}
     </li>
+    {{/unless}}
     {{/each}}
-</ul>
+</ol>
+
+{{!-- button list --}}
+<ol>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li><button>{{id}}</button></li>
+    {{/unless}}
+    {{/each}}
+</ol>
+
+{{!-- Devour It! list --}}
+<ol>
+{{#each burgers}}
+    {{#if devoured}}
+    <li>
+        {{id}}
+        {{burger_name}}
+        {{devoured}}
+    </li>
+    {{/if}}
+    {{/each}}
+</ol>
+
+<form>
+    <textarea type="text" id="burger" name="burger" rows="3" cols="30"></textarea>
+    <button type="submit">Submit</button>
+    <p>Enter a burger you want to eat!  Click the "Submit" button.</p>
+</form>

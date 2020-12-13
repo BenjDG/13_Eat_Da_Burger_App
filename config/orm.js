@@ -11,7 +11,7 @@ const orm = {
     },
 
     insertOne: function (table, col, value, cb) {
-        const queryString = `INSERT INTO ??(??) VALUES ?`
+        const queryString = `INSERT INTO ??(??) VALUES (?)`
         connection.query(queryString, [table, col, value], (err, data) => {
             if (err) throw err;
             cb(data);
