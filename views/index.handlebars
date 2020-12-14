@@ -1,7 +1,5 @@
 <h1>Eat some burgers!</h1>
-
 <h2>Burgers still to eat:</h2>
-
 {{!-- burger list --}}
 <ol>
     {{#each burgers}}
@@ -14,7 +12,6 @@
     {{/unless}}
     {{/each}}
 </ol>
-
 {{!-- button list --}}
 <ol>
     {{#each burgers}}
@@ -23,7 +20,6 @@
     {{/unless}}
     {{/each}}
 </ol>
-
 {{!-- Devour It! list --}}
 <h2>Burgers already eaten:</h2>
 <ol>
@@ -37,9 +33,9 @@
     {{/if}}
     {{/each}}
 </ol>
-
 <form>
     <input type="text" id="burger" name="burger"></input>
     <button id="submit">Submit</button>
     <p>Enter a burger you want to eat!  Click the "Submit" button.</p>
 </form>
+<button id="clearAll">Clear All</button>
