@@ -13,8 +13,10 @@ const burger = {
         })
     },
 
-    update: function(cb) {
-        orm.updateOne("burgers", function(result) {
+    //update devoured field of the record to true
+    update: function(whereVal, cb) {
+        //UPDATE burgers SET devoured = 'true' WHERE id = 1
+        orm.updateOne("burgers", "devoured", "1", "id", whereVal, function(result) {
             cb(result);
         })
     }
