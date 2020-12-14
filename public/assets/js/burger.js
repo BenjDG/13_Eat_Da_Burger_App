@@ -1,10 +1,13 @@
 $(document).ready(function () {
 	$("#submit").on("click", function (e) {
 		e.preventDefault();
-		console.log(e);
+		//console.log(e);
 		const burgerName = $("#burger").val();
-		console.log(burgerName);
-		submitData(burgerName);
+		//console.log(burgerName);
+        submitData(burgerName);
+        $("#burger").val("");
+        location.reload();
+
 	});
 	function submitData(burger) {
 		var settings = {
