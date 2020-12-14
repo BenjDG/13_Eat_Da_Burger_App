@@ -16,9 +16,9 @@ router.post("/", (req, res) => {
 	burger.insert(req.body.burger_name, function (result) {
 		if (result) {
 			console.log(`Records updated: ${result.affectedRows}`);
-			res.send(201).end();
+			res.sendStatus(201).end();
 		} else {
-			res.send(400).end();
+			res.sendStatus(400).end();
 		}
 	});
 });
@@ -29,11 +29,25 @@ router.patch("/", (req, res) => {
 		burger.update(idValue, function (result) {
 			if (result) {
 				console.log(`Records updated: ${result.affectedRows}`);
-				res.send(202).end();
+				res.sendStatus(202).end();
 			} else {
-				res.send(400).end();
+				res.sendStatus(400).end();
 			}
 		});
+});
+
+router.delete('/api/deleteAll', async (_req, res) => {
+
+	await burger.clear(
+		function (result) {
+			if (result) {
+				console.log(`Records updated: ${result.affectedRows}`);
+				res.sendStatus(202).end();
+			} else {
+				res.sendStatus(400).end();
+			}
+		}
+	);
 });
 
 module.exports = router;

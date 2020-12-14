@@ -19,6 +19,12 @@ const burger = {
         orm.updateOne("burgers", "devoured", "1", "id", whereVal, function(result) {
             cb(result);
         })
+    },
+
+    clear: function(cb) {
+        orm.deleteAll(function(result) {
+            cb(result);
+        });
     }
 }
 
