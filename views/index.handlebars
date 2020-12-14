@@ -19,12 +19,13 @@
 <ol>
     {{#each burgers}}
     {{#unless devoured}}
-    <li><button>{{id}}</button></li>
+    <li><button class="devour" id={{id}}>Devour it!</button></li>
     {{/unless}}
     {{/each}}
 </ol>
 
 {{!-- Devour It! list --}}
+<h2>Burgers already eaten:</h2>
 <ol>
 {{#each burgers}}
     {{#if devoured}}
