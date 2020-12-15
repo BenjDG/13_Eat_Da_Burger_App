@@ -38,8 +38,8 @@ router.patch("/", (req, res) => {
 		});
 });
 
-router.delete('/api/deleteAll', async (_req, res) => {
-	await burger.clear(
+router.delete('/', (_req, res) => {
+	burger.clear(
 		function (result) {
 			if (result) {
 				console.log(result);
