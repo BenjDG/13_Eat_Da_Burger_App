@@ -29,7 +29,7 @@ router.patch("/", (req, res) => {
 	const idValue = req.body.id;
 		burger.update(idValue, function (result) {
 			if (result) {
-				console.log(reslut);
+				console.log(result);
 				res.sendStatus(202).end();
 			} else {
 				console.log("patch error");
@@ -42,6 +42,7 @@ router.delete('/api/deleteAll', async (_req, res) => {
 	await burger.clear(
 		function (result) {
 			if (result) {
+				console.log(result);
 				res.sendStatus(202).end();
 			} else {
 				res.sendStatus(400).end();
