@@ -1,0 +1,28 @@
+{
+  "name": "13_eat_da_burger_app",
+  "version": "1.0.0",
+  "description": "A burger app that lets you eat the burgers virtually.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjDG/13_Eat_Da_Burger_App.git"
+  },
+  "keywords": [
+    "app",
+    "burger"
+  ],
+  "author": "Ben Galloway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenjDG/13_Eat_Da_Burger_App/issues"
+  },
+  "homepage": "https://github.com/BenjDG/13_Eat_Da_Burger_App#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
