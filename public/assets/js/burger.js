@@ -8,7 +8,7 @@ $(document).ready(function () {
 	});
 	function submitData(burger) {
 		const settings = {
-			url: "http://localhost:8080/",
+			url: "/",
 			method: "POST",
 			timeout: 0,
 			headers: {
@@ -25,7 +25,7 @@ $(document).ready(function () {
 		console.log(`devour clicked`);
         console.log(e.currentTarget.id);
         const settings = {
-			url: "http://localhost:8080/",
+			url: "/",
 			method: "PATCH",
 			timeout: 0,
 			headers: {
@@ -40,7 +40,7 @@ $(document).ready(function () {
 	});
 	$("#clearAll").on("click", function () {
 		const settings = {
-			url: "http://localhost:8080/api/deleteAll",
+			url: "/",
 			method: "DELETE",
 			timeout: 0,
 		};
