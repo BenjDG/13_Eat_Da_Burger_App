@@ -25,6 +25,11 @@ section{
     padding: 3rem 0 3rem;
 }
 
+input:focus{
+    border-bottom-color: #3feee6 !important;
+    box-shadow: #3feee6 !important;
+}
+
 .btn{
     background-color: #fc4445;
 }
