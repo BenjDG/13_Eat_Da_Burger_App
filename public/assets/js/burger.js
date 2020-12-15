@@ -21,6 +21,7 @@ $(document).ready(function () {
 		});
 	}
 	$(".devour").on("click", function (e) {
+		e.preventDefault();
 		console.log(`devour clicked`);
         console.log(e.currentTarget.id);
         const settings = {
