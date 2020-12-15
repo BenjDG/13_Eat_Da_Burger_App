@@ -3,9 +3,9 @@
         <h1 class="center-align">Eat some burgers!</h1>
         <div class="divider"></div>
     </div>
-    <div class="row">
+    <div class="row main">
         <div class="col s4">
-            <h2 class="center-align">Burgers still to eat:</h2>
+            <h4 class="center-align">Burgers still to eat:</h4>
             {{!-- burger list --}}
             <ol class="center-align">
                 {{#each burgers}}
@@ -31,7 +31,7 @@
         </div>
         {{!-- Devour It! list --}}
         <div class="col s4">
-            <h2 class="center-align">Burgers already eaten:</h2>
+            <h4 class="center-align">Burgers already eaten:</h4>
             <ol class="center-align">
                 {{#each burgers}}
                 {{#if devoured}}
@@ -50,8 +50,8 @@
         <div class="col s4"></div>
         <div class="col s4">
             <form>
-                <input type="text" id="burger" name="burger"></input>
-                <button id="submit">Submit</button>
+                <input type="text" id="burger" name="burger" placeholder="Type a burger name."></input>
+                <button id="submit" class="waves-effect waves-light btn">Submit</button>
                 <p>Enter a burger you want to eat! Click the "Submit" button.</p>
             </form>
         </div>
@@ -60,7 +60,7 @@
     <div class="row center-align">
         <div class="col s4"></div>
         <div class="col s4">
-            <button id="clearAll">Clear All</button>
+            <button id="clearAll" class="waves-effect waves-light btn">Clear All</button>
         </div>
         <div class="col s4"></div>
     </div>
