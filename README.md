@@ -43,6 +43,21 @@ Type the name of the burger into the input box and then click submit.  After the
 <br/>
 <br/>
 
+## Screenshot Desktop
+
+![eat the burger desktop](./public/assets/img/desktop.PNG)
+
+<br/>
+<br/>
+
+## Screenshot Mobile
+
+![eat the burger mobile](./public/assets/img/mobile.PNG)
+
+<br/>
+<br/>
+
+
 
 ## License
 
