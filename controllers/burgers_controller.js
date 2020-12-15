@@ -9,14 +9,12 @@ router.get("/", (_req, res) => {
 			burgers: data,
 		};
 		res.render("index", dataOb);
-		console.log("router.get.res");
 	});
 });
 
 router.post("/", (req, res) => {
 	burger.insert(req.body.burger_name, function (result) {
 		if (result) {
-			console.log(result);
 			res.sendStatus(201).end();
 		} else {
 			console.log("post error");
@@ -29,7 +27,6 @@ router.patch("/", (req, res) => {
 	const idValue = req.body.id;
 		burger.update(idValue, function (result) {
 			if (result) {
-				console.log(result);
 				res.sendStatus(202).end();
 			} else {
 				console.log("patch error");
@@ -42,9 +39,9 @@ router.delete('/', (_req, res) => {
 	burger.clear(
 		function (result) {
 			if (result) {
-				console.log(result);
 				res.sendStatus(202).end();
 			} else {
+				console.log("delete error");
 				res.sendStatus(400).end();
 			}
 		}

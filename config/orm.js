@@ -7,9 +7,7 @@ const orm = {
             if (err) throw err;
             cb(data);
         })
-
     },
-
     insertOne: function (table, col, value, cb) {
         const queryString = `INSERT INTO ??(??) VALUES (?)`;
         connection.query(queryString, [table, col, value], (err, data) => {
@@ -17,7 +15,6 @@ const orm = {
             cb(data);
         })
     },
-
     updateOne: function (table, col, value, whereCol, whereVal, cb) {
         const queryString = `UPDATE ?? SET ?? = ? WHERE ?? = ?`;
         connection.query(queryString, [table, col, value, whereCol, whereVal], (err, data) => {
@@ -25,7 +22,6 @@ const orm = {
             cb(data);
         })
     },
-
     deleteAll: function (cb) {
         const query = `DELETE FROM burgers`;
         connection.query(query,(err, data) => {
